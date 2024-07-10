@@ -17,6 +17,9 @@ const Navbar = () => {
             <Link to={'/example'} className='text-decoration-none text-dark'>
             <li className='list-group-items fw-bold h3'>Example</li>
             </Link>
+            <Link to={'/table'} className='text-decoration-none text-dark'>
+            <li className='list-group-items fw-bold h3'>UserData</li>
+            </Link>
           </ul>
         </div>
       </nav>

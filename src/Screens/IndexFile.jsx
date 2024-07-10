@@ -21,6 +21,8 @@ const IndexFile = () => {
   })
 
 
+  console.log(edit)
+
 //   Delete
   const deleteData = (id) => {
     setUserData(
@@ -38,6 +40,8 @@ const IndexFile = () => {
         phone : formData.phone,
         city : formData.city
     }
+    console.log(newData)
+    navigate('/table')
     setUserData([newData, ...userData]);
   }
 
@@ -58,6 +62,7 @@ const updateData = ({oldID, name , email, city, phone}) => {
         {data : {}, isEdit : false}
     )
 }
+ 
 
   return (
     <>
@@ -67,7 +72,7 @@ const updateData = ({oldID, name , email, city, phone}) => {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/document' element={<Document/>}/>
-          <Route path='/example' element={<Example saveData={saveData} edit={edit} updateData={updateData}/>}/>
+          <Route path='/example' element={<Example saveData={saveData} edit={edit} updateData={updateData} userData={userData}/>}/>
           <Route path='/table' element={<Table userData={userData} deleteData={deleteData} editData={editData}/>}/>
         </Routes>
       </main>

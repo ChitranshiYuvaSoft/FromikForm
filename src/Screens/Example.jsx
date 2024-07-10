@@ -1,5 +1,7 @@
 import React from 'react'
-import Form from '../Components/Form';
+import FormComponent from '../Components/FormComponent'
+
+
 
 const Example = ({saveData, edit, updateData}) => {
 
@@ -15,7 +17,7 @@ const Example = ({saveData, edit, updateData}) => {
                              <div className='mainContent w-100 container-fluied mt-4 d-flex align-items-start justify-content-around flex-column '>
                                 <h3>Example Here....</h3>
                                 <div className='w-100 exampleContent d-flex align-items-center justify-content-center'>
-                                 <Form saveData={saveData} edit={edit} updateData={updateData}/>
+                                 <FormComponent saveData={saveData} edit={edit} updateData={updateData}/>
                                 </div>
                              </div>
                             {/* <Link to="/document" className="btn btn-warning px-3 py-3 fw-bold display-1 mt-4 rounded-0"> */}
